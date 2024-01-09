@@ -1,0 +1,6 @@
+import 'package:cc_installer_lib/cc_installer_lib.dart';
+
+void main() {
+  var awesome = Awesome();
+  print('awesome: ${awesome.isAwesome}');
+}
