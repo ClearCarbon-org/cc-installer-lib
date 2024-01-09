@@ -41,3 +41,25 @@ clean: ## Clean the project
 	@rm -rf pubspec.lock
 	@dart clean
 
+# Git
+.PHONY: fetch-main
+fetch-main:
+	$(shell git fetch origin main)
+
+.PHONY: fetch-dev
+fetch-main:
+	$(shell git fetch origin development)
+
+.PHONY: rebase-main
+rebase-main:
+	$(shell git pull --rebase origin main)
+
+.PHONY: rebase-dev
+rebase-main:
+	$(shell git pull --rebase origin development)
+
+.PHONY: push-all
+push-all:
+	$(shell git add *)
+	$(shell git commit -m "fast push")
+	$(shell git push -u origin development)
